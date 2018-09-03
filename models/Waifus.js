@@ -6,6 +6,10 @@ const WaifuSchema = new Schema({
     required: [true, 'Name field is required'],
     type: String
   },
+  age: {
+    required: [true, 'Age field is required'],
+    type: Number
+  },
   hairColor: {
     required: [true, 'hair color field is required'],
     type: String
@@ -13,13 +17,7 @@ const WaifuSchema = new Schema({
   anime: {
     required: [true, 'Anime from field is required'],
     type: String
-  },
-  age: {
-    required: false,
-    type: Number
   }
 })
 
-const Waifu = mongoose.model('Waifu', WaifuSchema)
-
-module.exports = Waifu
+module.exports = Waifu = mongoose.model('waifu', WaifuSchema)
