@@ -3,10 +3,9 @@ const router = express.Router()
 const Waifu = require('../../models/Waifus')
 
 /* GET all waifus */
-router.get('/waifus', (req, res, next) => {
-  res.send({
-    type: 'GET'
-  })
+router.get('/waifus', async (req, res, next) => {
+  const waifu = await Waifu.find({})
+  res.send(waifu)
 })
 /* Post a new waifu */
 router.post('/waifus', async (req, res, next) => {
@@ -18,8 +17,10 @@ router.post('/waifus', async (req, res, next) => {
   }
 })
 /* Update a waifu */
-router.put('/waifus/:id', (req, res, next) => {
-  res.send({ waifus: req.params.name })
+router.put('/waifus/:id', async (req, res, next) => {
+  try {
+    const waifu = await Waifu.findByIdAndRemove({ _id: req.params.id })
+  } catch (e) {}
 })
 /* DELETE a waifu */
 router.delete('/waifus/:id', async (req, res, next) => {

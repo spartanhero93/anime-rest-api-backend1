@@ -1,0 +1,31 @@
+{ 
+    "name" : "Yuzuriha Inori", 
+    "age" : 17, 
+    "hairColor" : "Light pink", 
+    "anime" : "Guilty Crown",
+    "geometry" : { "type": "point", "coordinates": [13.4, 45.6]}
+}
+
+{ 
+    "name" : "Shiina Mashiro", 
+    "age" : 17, 
+    "hairColor" : "Blonde", 
+    "anime" : "The Pet Girl of Sakurasou",
+    "geometry" : { "type": "point", "coordinates": [12.4, -15.1]}
+}
+
+{ 
+    "name" : "Isla", 
+    "age" : 9999, 
+    "hairColor" : "Silver", 
+    "anime" : "Plastic Memories",
+    "geometry" : { "type": "point", "coordinates": [-56.4, 19.2]}
+}
+
+{ 
+    "name" : "Gokō Ruri ", 
+    "age" : 16, 
+    "hairColor" : "Black", 
+    "anime" : "Oriemo",
+    "geometry" : { "type": "point", "coordinates": [56.1, 42.1]}
+}
