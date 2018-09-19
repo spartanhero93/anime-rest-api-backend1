@@ -12,8 +12,11 @@ app.use(express.urlencoded({ extended: false }))
 app.get('/', (req, res) => res.send({ data: 'Welcome to the homepage' }))
 
 app.use('/api', require('./routes/API/api'))
+
 app.use((err, req, res, next) => {
   res.status(422).send({ error: err.message })
 })
 
-app.listen(process.env.port || 9000, () => console.log('server is running!'))
+const PORT = process.env.port || 9000
+
+app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`))
